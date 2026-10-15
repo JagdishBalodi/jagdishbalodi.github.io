@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142b25">
+  <meta name="description" content="Jagdish Balodi — software engineer, Pahadi soul, and admirer of quiet trails in Uttarakhand.">
+  <title>Jagdish Balodi — Heaven-Based, Cloud-Connected</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#f6f3e9; --muted:#c2cfc4; --deep:#102720; --green:#254b3c; --gold:#e5c58a; --glass:rgba(13,34,27,.66); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; background:var(--deep); }
+    .hero {
+      min-height:100svh; position:relative; isolation:isolate; display:flex; align-items:center;
+      overflow:hidden; padding:34px clamp(22px,7vw,100px);
+      background:
+        linear-gradient(90deg, rgba(9,26,21,.90) 0%, rgba(9,26,21,.60) 52%, rgba(9,26,21,.14) 100%),
+        linear-gradient(0deg, rgba(9,26,21,.68), transparent 45%),
+        url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2200&q=85") center/cover;
+    }
+    .hero:after { content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(ellipse at 78% 25%, rgba(229,197,138,.18), transparent 35%); }
+    nav { position:absolute; top:30px; left:clamp(22px,7vw,100px); right:clamp(22px,7vw,100px); display:flex; align-items:center; justify-content:space-between; }
+    .brand { font-weight:700; letter-spacing:.12em; font-size:.82rem; text-transform:uppercase; }
+    .navtag { border:1px solid rgba(246,243,233,.35); border-radius:999px; padding:10px 15px; font-size:.78rem; color:var(--ink); text-decoration:none; backdrop-filter:blur(8px); }
+    .intro { max-width:760px; padding-top:45px; }
+    .eyebrow { display:flex; align-items:center; gap:11px; text-transform:uppercase; letter-spacing:.2em; font-size:.72rem; font-weight:700; color:var(--gold); }
+    .eyebrow:before { content:""; width:34px; height:1px; background:var(--gold); }
+    h1 { font-family:"Playfair Display",serif; font-size:clamp(3.1rem,8vw,7rem); line-height:.98; letter-spacing:-.045em; font-weight:600; margin:24px 0; }
+    h1 span { color:var(--gold); }
+    .lead { font-size:clamp(1.02rem,2vw,1.25rem); line-height:1.8; max-width:590px; color:#e1e8df; }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; margin:28px 0 32px; }
+    .chip { border:1px solid rgba(246,243,233,.25); background:rgba(255,255,255,.07); backdrop-filter:blur(8px); padding:9px 13px; border-radius:999px; font-size:.83rem; color:#f4f1e8; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 19px; border-radius:999px; text-decoration:none; font-size:.9rem; font-weight:700; transition:transform .2s, background .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .primary { background:var(--gold); color:#1c3027; }
+    .secondary { border:1px solid rgba(246,243,233,.42); color:var(--ink); }
+    .scroll { position:absolute; bottom:26px; right:clamp(22px,7vw,100px); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); writing-mode:vertical-rl; }
+    section { padding:clamp(65px,9vw,120px) clamp(22px,10vw,145px); }
+    .about { background:#f3f0e6; color:#1b3329; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(250px,.8fr); gap:clamp(35px,8vw,110px); align-items:center; }
+    .section-label { text-transform:uppercase; letter-spacing:.18em; font-size:.72rem; font-weight:700; color:#71856e; }
+    h2 { font-family:"Playfair Display",serif; font-size:clamp(2.3rem,5vw,4.2rem); line-height:1.08; font-weight:600; letter-spacing:-.03em; margin:16px 0 22px; }
+    .about p { color:#536459; line-height:1.9; font-size:1rem; }
+    .quote { border-left:2px solid #b9a06c; padding:12px 0 12px 25px; font-family:"Playfair Display",serif; font-size:clamp(1.4rem,2.8vw,2.1rem); line-height:1.45; color:#254b3c; }
+    .work { background:#142b25; }
+    .work h2 { color:var(--ink); }
+    .work-intro { color:var(--muted); line-height:1.8; max-width:650px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:36px; }
+    .card { border:1px solid rgba(246,243,233,.14); background:rgba(255,255,255,.035); border-radius:18px; padding:25px; min-height:205px; }
+    .icon { font-size:1.5rem; }
+    .card h3 { margin:18px 0 10px; font-size:1.05rem; }
+    .card p { color:var(--muted); line-height:1.75; font-size:.9rem; margin:0; }
+    .outro { text-align:center; background:#203e31; }
+    .outro h2 { max-width:760px; margin:18px auto; }
+    .outro p { color:var(--muted); line-height:1.8; max-width:560px; margin:0 auto 28px; }
+    footer { padding:24px; background:#102720; display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; color:#9eafa2; font-size:.78rem; }
+    footer a { color:var(--gold); text-decoration:none; }
+    @media (max-width:760px) {
+      .hero { background-position:58% center; }
+      .about { grid-template-columns:1fr; }
+      .cards { grid-template-columns:1fr; }
+      .card { min-height:0; }
+      .scroll { display:none; }
+      nav { top:22px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; } }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav aria-label="Main navigation">
+      <div class="brand">Pahari.in</div>
+      <a class="navtag" href="#about">A little about me ↘</a>
+    </nav>
+    <div class="intro">
+      <div class="eyebrow">Software Engineer · Uttarakhand, India</div>
+      <h1>Heaven-based.<br><span>Cloud-connected.</span></h1>
+      <p class="lead">Building things with code, finding balance in the mountains, and choosing a little more calm over a little more noise.</p>
+      <div class="chips">
+        <span class="chip">💻 Data &amp; ETL Engineering</span>
+        <span class="chip">🏔️ Pahadi at heart</span>
+        <span class="chip">🌿 Quiet trails &amp; photography</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#about">Get to know me</a>
+        <a class="btn secondary" href="#work">What I do</a>
+      </div>
+    </div>
+    <div class="scroll">Scroll to explore ↓</div>
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <div>
+        <div class="section-label">Beyond the screen</div>
+        <h2>Rooted in the hills.<br>Curious about the world.</h2>
+        <p>I'm Jagdish Balodi, a technology professional from Uttarakhand. My work lives in databases, data pipelines and the details that make systems run better. Outside work, I’m drawn to open skies, mountain roads, photography and the kind of quiet that helps you hear yourself think.</p>
+        <p>I appreciate simple things, honest conversations and a life that leaves room for nature—not just notifications.</p>
+      </div>
+      <div class="quote">“Build a career in technology. Make a life that still feels close to home.”</div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="section-label">What keeps me busy</div>
+      <h2>Technology by work.<br>Mountains by heart.</h2>
+      <p class="work-intro">I work across data engineering and database development, helping move data reliably and making everyday processes more efficient.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">⌘</div>
+          <h3>Data &amp; ETL Engineering</h3>
+          <p>Building and improving data pipelines with Ab Initio, ODI, PL/SQL and BigQuery.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⌁</div>
+          <h3>Problem-solving mindset</h3>
+          <p>Turning complex requirements into practical solutions, with a focus on reliability and efficiency.</p>
+        </article>
+        <article class="card">
+          <div class="icon">☼</div>
+          <h3>Quiet Trails</h3>
+          <p>Exploring Uttarakhand through photography—one trail, changing sky and small moment at a time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="outro" id="connect">
+      <div class="section-label">A little more human</div>
+      <h2>Less noise. More meaning.<br>Always a view of the hills.</h2>
+      <p>Thanks for stopping by. If you’re into technology, photography, or the slower side of life in the mountains, we already have something to talk about.</p>
+      <!-- Add your public Instagram/profile URL below when ready. -->
+      <a class="btn primary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Find me on Instagram ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Jagdish Balodi · Made with a little Pahadi soul.</span>
+    <a href="#top">Back to the top ↑</a>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
