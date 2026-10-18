@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142b25">
+  <meta name="description" content="A small collection of Jagdish Balodi's photographs from the hills of Uttarakhand.">
+  <title>Quiet Trails — Photo Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#f6f3e9; --muted:#c2cfc4; --deep:#102720; --gold:#e5c58a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--deep); color:var(--ink); font-family:"DM Sans",sans-serif; }
+    header { padding:28px clamp(22px,7vw,100px); display:flex; align-items:center; justify-content:space-between; gap:18px; border-bottom:1px solid rgba(246,243,233,.12); }
+    .brand { color:var(--ink); text-decoration:none; font-weight:700; letter-spacing:.12em; font-size:.82rem; text-transform:uppercase; }
+    .back { color:var(--ink); text-decoration:none; border:1px solid rgba(246,243,233,.3); border-radius:999px; padding:10px 15px; font-size:.82rem; }
+    .intro { padding:clamp(55px,8vw,100px) clamp(22px,7vw,100px) 35px; max-width:1000px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.2em; font-size:.72rem; font-weight:700; }
+    h1 { font-family:"Playfair Display",serif; font-weight:600; font-size:clamp(3rem,7vw,6.3rem); line-height:1; letter-spacing:-.045em; margin:18px 0; }
+    h1 span { color:var(--gold); }
+    .intro p { color:var(--muted); line-height:1.8; max-width:630px; font-size:1.05rem; }
+    .gallery { padding:25px clamp(22px,7vw,100px) 90px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    figure { margin:0; overflow:hidden; border-radius:18px; background:rgba(255,255,255,.045); border:1px solid rgba(246,243,233,.12); }
+    figure:first-child { grid-column:1 / -1; }
+    .photo { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform .45s ease; }
+    figure:first-child .photo { aspect-ratio:2.05/1; }
+    figure:hover .photo { transform:scale(1.025); }
+    figcaption { padding:17px 20px 20px; }
+    figcaption h2 { font-family:"Playfair Display",serif; font-size:1.35rem; font-weight:500; margin:0 0 6px; }
+    figcaption p { color:var(--muted); font-size:.88rem; line-height:1.6; margin:0; }
+    footer { padding:24px clamp(22px,7vw,100px); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; color:#9eafa2; font-size:.78rem; border-top:1px solid rgba(246,243,233,.12); }
+    footer a { color:var(--gold); text-decoration:none; }
+    @media(max-width:700px) { .gallery { grid-template-columns:1fr; gap:18px; } figure:first-child { grid-column:auto; } figure:first-child .photo { aspect-ratio:4/3; } header { align-items:flex-start; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Pahari.in</a>
+    <a class="back" href="index.html">← Back to home</a>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">Quiet Trails · Uttarakhand</div>
+      <h1>A little closer<br>to <span>the hills.</span></h1>
+      <p>Small moments from the mountains I call home—soft morning light, clouds moving through the valleys, and landscapes worth pausing for. Photographs captured on my own trails.</p>
+    </section>
+    <section class="gallery" aria-label="Photo gallery">
+      <figure>
+        <img class="photo" src="gallery-misty-hills.jpg" alt="Green hills and low clouds drifting through a Uttarakhand valley" loading="lazy">
+        <figcaption><h2>Where the clouds settle</h2><p>Misty valleys, green slopes, and a slower kind of morning.</p></figcaption>
+      </figure>
+      <figure>
+        <img class="photo" src="gallery-sunrise.jpg" alt="Distant Himalayan peaks glowing pink in the early morning light" loading="lazy">
+        <figcaption><h2>First light</h2><p>Warm light touching the distant Himalayan peaks.</p></figcaption>
+      </figure>
+      <figure>
+        <img class="photo" src="gallery-clouds.jpg" alt="Layers of hills surrounded by a sea of clouds" loading="lazy">
+        <figcaption><h2>Above the clouds</h2><p>Layers of hills disappearing into the mist.</p></figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> Jagdish Balodi · Quiet Trails</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to the top ↑</a></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
