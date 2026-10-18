@@ -45,7 +45,10 @@
     .section-label { text-transform:uppercase; letter-spacing:.18em; font-size:.72rem; font-weight:700; color:#71856e; }
     h2 { font-family:"Playfair Display",serif; font-size:clamp(2.3rem,5vw,4.2rem); line-height:1.08; font-weight:600; letter-spacing:-.03em; margin:16px 0 22px; }
     .about p { color:#536459; line-height:1.9; font-size:1rem; }
+    .about-side { display:flex; flex-direction:column; gap:22px; }
+    .portrait { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 38%; border-radius:20px; box-shadow:0 18px 45px rgba(21,47,35,.18); }
     .quote { border-left:2px solid #b9a06c; padding:12px 0 12px 25px; font-family:"Playfair Display",serif; font-size:clamp(1.4rem,2.8vw,2.1rem); line-height:1.45; color:#254b3c; }
+    .social-links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
     .work { background:#142b25; }
     .work h2 { color:var(--ink); }
     .work-intro { color:var(--muted); line-height:1.8; max-width:650px; }
@@ -101,7 +104,10 @@
         <p>I'm Jagdish Balodi, a technology professional from Uttarakhand. My work lives in databases, data pipelines and the details that make systems run better. Outside work, I’m drawn to open skies, mountain roads, photography and the kind of quiet that helps you hear yourself think.</p>
         <p>I appreciate simple things, honest conversations and a life that leaves room for nature—not just notifications.</p>
       </div>
-      <div class="quote">“Build a career in technology. Make a life that still feels close to home.”</div>
+      <div class="about-side">
+        <img class="portrait" src="jagdish-portrait.png" alt="Jagdish Balodi outdoors in Uttarakhand" loading="lazy">
+        <div class="quote">“Build a career in technology. Make a life that still feels close to home.”</div>
+      </div>
     </section>
 
     <section class="work" id="work">
@@ -131,8 +137,10 @@
       <div class="section-label">A little more human</div>
       <h2>Less noise. More meaning.<br>Always a view of the hills.</h2>
       <p>Thanks for stopping by. If you’re into technology, photography, or the slower side of life in the mountains, we already have something to talk about.</p>
-      <!-- Add your public Instagram/profile URL below when ready. -->
-      <a class="btn primary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Find me on Instagram ↗</a>
+      <div class="social-links">
+        <a class="btn primary" href="https://www.linkedin.com/in/jagdish-balodi/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="btn secondary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Find me on Instagram ↗</a>
+      </div>
     </section>
   </main>
 
